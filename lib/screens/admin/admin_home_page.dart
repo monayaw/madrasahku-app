@@ -103,16 +103,22 @@ class AdminHomePage extends StatelessWidget {
                       ),
                     ),
 
-                    // Ilustrasi bukit
-                    Positioned(
-                      left: -15,
-                      right: -15,
-                      bottom: -28,
-                      height: 95,
-                      child: CustomPaint(
-                        painter: _HillPainter(),
-                      ),
-                    ),
+                   
+ 
+
+                     // Gambar masjid di atas bukit
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    child: Image.asset(
+                  'assets/image/masjid.png',
+                    height: 127,
+                    fit: BoxFit.contain,
+                     alignment: Alignment.bottomCenter,
+                  ),
+                 ),
+
                   ],
                 ),
               ),
@@ -160,10 +166,10 @@ class AdminHomePage extends StatelessWidget {
                     onTap: () => _showComingSoon(context, 'Jadwal'),
                   ),
                   _MenuItem(
-                    title: 'Materi/Video',
-                    icon: Icons.video_library_outlined,
+                    title: 'Pengumuman',
+                    icon: Icons.campaign_outlined,
                     color: const Color(0xFF60A5FA),
-                    onTap: () => _showComingSoon(context, 'Materi/Video'),
+                    onTap: () => _showComingSoon(context, 'Pengumuman'),
                   ),
                   _MenuItem(
                     title: 'Lainnya',
@@ -212,15 +218,15 @@ class _MenuItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 48,
-            height: 48,
+            width: 80,
+            height: 80,
             decoration: BoxDecoration(
               color: const Color(0xFFF3F4F6),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(
               icon,
-              size: 27,
+              size: 40,
               color: color,
             ),
           ),
