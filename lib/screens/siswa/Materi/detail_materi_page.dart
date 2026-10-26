@@ -11,6 +11,7 @@ class DetailMateriPage extends StatefulWidget {
   final String deskripsi;
   final String fileInfo;
 
+
   const DetailMateriPage({
     super.key,
     this.judul = 'Fotosintesis',

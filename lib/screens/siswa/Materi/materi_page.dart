@@ -35,6 +35,7 @@ class _MateriPageState extends State<MateriPage> {
         ..._materiList.map((m) => m.subject),
       ];
 
+
   List<_Materi> get _filteredMateri {
     final q = _query.trim().toLowerCase();
     return _materiList.where((m) {
